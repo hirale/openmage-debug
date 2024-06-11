@@ -316,7 +316,12 @@ class Sheep_Debug_Helper_Data extends Mage_Core_Helper_Data
      */
     public function getCurrentScriptDuration()
     {
-        return function_exists('xdebug_time_index') ? xdebug_time_index() : null;
+        static $startTime = null;
+        if ($startTime === null) {
+            $startTime = $_SERVER["REQUEST_TIME_FLOAT"] ?? microtime(true);
+        }
+
+        return microtime(true) - $startTime;
     }
 
 

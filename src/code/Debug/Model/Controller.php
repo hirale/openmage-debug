@@ -266,6 +266,9 @@ class Sheep_Debug_Model_Controller
      */
     public function getSessionId()
     {
+        if (!$this->sessionId) {
+            $this->initFromSession();
+        }
         return $this->sessionId;
     }
 

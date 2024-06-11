@@ -18,7 +18,7 @@ class Sheep_Debug_Helper_Config extends Mage_Core_Helper_Abstract
      */
     public function getMagentoVersion()
     {
-        return Mage::getVersion();
+        return Mage::getOpenMageVersion();
     }
 
 
@@ -40,7 +40,22 @@ class Sheep_Debug_Helper_Config extends Mage_Core_Helper_Abstract
      */
     public function getExtensionRequirements()
     {
-        return array('spl', 'dom', 'simplexml', 'mcrypt', 'hash', 'curl', 'iconv', 'ctype', 'gd', 'soap', 'mbstring');
+        return [
+            'ctype',
+            'curl',
+            'dom',
+            'gd',
+            'hash',
+            'iconv',
+            'intl',
+            'json',
+            'libxml',
+            'mbstring',
+            'pdo',
+            'simplexml',
+            'soap',
+            'zlib'
+        ];
     }
 
 

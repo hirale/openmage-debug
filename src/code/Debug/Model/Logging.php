@@ -216,7 +216,7 @@ class Sheep_Debug_Model_Logging
 
         // End position not saved yet
         if (!$endPosition) {
-            return trim(file_get_contents($filePath, null, null, $startPosition));
+            return trim(file_get_contents($filePath, false, null, $startPosition));
         }
 
         // End position exists but is less then start position
@@ -224,7 +224,7 @@ class Sheep_Debug_Model_Logging
             return '';
         }
 
-        return trim(file_get_contents($filePath, null, null, $startPosition, $endPosition - $startPosition));
+        return trim(file_get_contents($filePath, false, null, $startPosition, $endPosition - $startPosition));
     }
 
 }
