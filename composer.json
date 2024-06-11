@@ -27,7 +27,7 @@
         "app/etc/modules/Sheep_Debug.xml"
       ],
       [
-        "src/code",
+        "src/code/Debug",
         "app/code/community/Sheep/Debug"
       ],
       [
