@@ -20,29 +20,6 @@ Don't forget to check out [screenshots gallery](docs/images.md)
 
 # Installation 
 
-## Using Modman
-
-- Make sure you have [Modman](https://github.com/colinmollenhour/modman) installed
-- Allow symlinks for the templates directory (required for installations via Modman)
-    - Use n98-magerun like pro: `n98-magerun.phar dev:symlinks`
-    - Or just set 'Allow Symlinks' to 'Yes' from System - Configuration / Advanced / Developer / Template Settings
-
-- Install Debug Toolbar module:
-```bash
-cd [magento root folder]
-modman init
-modman clone https://github.com/madalinoprea/magneto-debug.git
-```
-- Flush Magento's cache 
-
-### How to update
-I'm pretty lazy and I don't like to create Magento Connect packages. With modman you can effortlessly grab latest changes from github.
-```
-cd [magento root folder]
-modman update magneto-debug
-```
-- Flush Magento's cache
-
 ## Using composer
 
 ### Install with [Magento Composer Installer](https://github.com/Cotya/magento-composer-installer)
@@ -76,13 +53,6 @@ composer require hirale/openmage-debug
 - Fatal error while running unit tests
    - If you get error `PHP Fatal error: Uncaught exception 'Exception' with message 'Warning: session_start(): Cannot send session cookie headers already sent by ` you should review your phpunit configuration file and redirect phpunit output to stderr, please check my configuration file from phpunit.xml
    - More details can be found here #83
-
-
-# Authors, contributors
-
-- [Mario O](https://twitter.com/madalinoprea)
-- [Other contributors](https://github.com/madalinoprea/magneto-debug/graphs/contributors)
-
 
 # License
 
