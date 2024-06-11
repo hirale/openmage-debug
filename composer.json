@@ -1,22 +1,55 @@
 {
-  "name": "madalinoprea/magneto-debug",
-  "description": "Development Debug Toolbar for Magento 1.x",
+  "name": "hirale/openmage-debug",
+  "description": "Development Debug Toolbar for OpenMage",
   "type": "magento-module",
-  "keywords": ["Magento", "logging", "performance"],
-  "homepage": "https://github.com/madalinoprea/magneto-debug",
+  "keywords": [
+    "magento",
+    "magento1",
+    "openmage"
+  ],
   "license": "MIT",
   "authors": [
-    {"name": "Madalin Oprea (Mario)"}
+    {
+      "name": "Madalin Oprea (Mario)"
+    },
+    {
+      "name": "Hirale"
+    }
   ],
-  "support": {
-    "wiki": "https://github.com/madalinoprea/magneto-debug/wiki",
-    "issues": "https://github.com/madalinoprea/magneto-debug/issues",
-    "source": "https://github.com/madalinoprea/magneto-debug"
-  },
   "require": {
+    "php": "^8.0",
     "magento-hackathon/magento-composer-installer": "*"
   },
-  "suggest": {
-    "ecomdev/ecomdev_phpunit": "Allows to verify compatibility by running module's unit tests"
+  "extra": {
+    "map": [
+      [
+        "src/Sheep_Debug.xml",
+        "app/etc/modules/Sheep_Debug.xml"
+      ],
+      [
+        "src/design/layout/sheep_debug.xml",
+        "app/design/frontend/base/default/layout/sheep_debug.xml"
+      ],
+      [
+        "src/design/template/sheep_debug",
+        "app/design/frontend/base/default/template/sheep_debug"
+      ],
+      [
+        "src/skin",
+        "skin/frontend/base/default/sheep_debug"
+      ],
+      [
+        "src/design/layout/sheep_debug.xml",
+        "app/design/adminhtml/default/default/layout/sheep_debug.xml"
+      ],
+      [
+        "src/design/template/sheep_debug",
+        "app/design/adminhtml/default/default/template/sheep_debug"
+      ],
+      [
+        "src/skin",
+        "skin/adminhtml/default/default/sheep_debug"
+      ],
+    ]
   }
 }
