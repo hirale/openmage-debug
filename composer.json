@@ -27,6 +27,10 @@
         "app/etc/modules/Sheep_Debug.xml"
       ],
       [
+        "src/code",
+        "app/code/community/Sheep/Debug"
+      ],
+      [
         "src/design/layout/sheep_debug.xml",
         "app/design/frontend/base/default/layout/sheep_debug.xml"
       ],
@@ -49,7 +53,7 @@
       [
         "src/skin",
         "skin/adminhtml/default/default/sheep_debug"
-      ],
+      ]
     ]
   }
 }
